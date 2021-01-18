@@ -1,5 +1,6 @@
-#include<stdio.h>
-#define true 1
-#define false !true
+#include "functions.h"
 
-typedef int bool;
+int getSize(int arr[])
+{
+    return *(&arr + 1) - arr;
+}
