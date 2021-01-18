@@ -1,6 +1,6 @@
 
 #include <stdlib.h>
-
+#include <time.h>
 //Define bool type
 #define False 0
 #define True !False
