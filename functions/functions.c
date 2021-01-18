@@ -18,8 +18,11 @@ int aleatoire(int start, int end)
 }
 
 //initialize array[size] with random #
-void initArray(int arr[],int start, int end)
+void initArray(int arr[], int size, int start, int end)
 {
-    for (int i = 0; i < getSize(arr)-1; i++)
-        arr[i] = aleatoire(start,end);
+    //Used to reset the seed of the rand generator
+    srand(time(0));
+    
+    //Fill arr with random #
+    for (int i = 0; i < size-1; i++) arr[i] = aleatoire(start,end);
 }
