@@ -10,3 +10,5 @@ typedef int bool;
 int getSize(int arr[]);
 
 int aleatoire(int start, int end);
+
+void initArray(int arr[], int size, int start, int end);
