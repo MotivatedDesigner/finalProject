@@ -64,7 +64,6 @@ void bubbleSort(int arr[], int size)
         if(isSorted) break;
     }
 }
-<<<<<<< HEAD
 
 int max(int arr[], int size)
 {
