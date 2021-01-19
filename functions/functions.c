@@ -53,9 +53,9 @@ void bubbleSort(int arr[], int size)
 {
     // Handle if the array is already sorted
     bool isSorted = True;
-    for(int i = 0; i < 5; i++)
+    for(int i = 0; i < size; i++)
     {
-        for(int j=0;j<5-i-1;j++)
+        for(int j = 0; j < size-i-1; j++)
             if( arr[j] > arr[j+1] ) 
             {
                 swap(&arr[j],&arr[j+1]);
@@ -64,6 +64,7 @@ void bubbleSort(int arr[], int size)
         if(isSorted) break;
     }
 }
+<<<<<<< HEAD
 
 int max(int arr[], int size)
 {
@@ -93,3 +94,5 @@ void subPrime(int arr[], int size, int subarr[])
 {
     for (int i = 0, j = 0; i < size; i++) if ( isPrime(arr[i]) ) { subarr[j] = arr[i]; j++; }
 }
+=======
+>>>>>>> 90559d5acd05a9ea74221cd05e88c88aaa968cac
