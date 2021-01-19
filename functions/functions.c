@@ -94,5 +94,3 @@ void subPrime(int arr[], int size, int subarr[])
 {
     for (int i = 0, j = 0; i < size; i++) if ( isPrime(arr[i]) ) { subarr[j] = arr[i]; j++; }
 }
-=======
->>>>>>> 90559d5acd05a9ea74221cd05e88c88aaa968cac
