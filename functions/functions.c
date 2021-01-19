@@ -68,9 +68,9 @@ void bubleSort(int arr[], int size)
 {
     // Handle if the array is already sorted
     bool isSorted = True;
-    for(int i = 0; i < 5; i++)
+    for(int i = 0; i < size; i++)
     {
-        for(int j=0;j<5-i-1;j++)
+        for(int j = 0; j < size-i-1; j++)
             if( arr[j] > arr[j+1] ) 
             {
                 swap(&arr[j],&arr[j+1]);
