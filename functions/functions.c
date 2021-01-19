@@ -27,37 +27,29 @@ void initArray(int arr[], int size, int start, int end)
     for (int i = 0; i < size-1; i++) arr[i] = aleatoire(start,end);
 }
 
-//Print array of length n
-void printArray(int arr[], int length)
+void printArray(int arr[], int lengthOfArr)
 {
-    for (int i = 0; i < length; i++) printf("%d",arr[i]);
+    for (int i = 0; i < lengthOfArr; i++) printf("%d",arr[i]);
 }
 
-// Delete repeated elements from array of int
 void deleteDouble(int arr[], int size, int tab[])
 {
     bool isFound;
-    int tmpKey;
     for(int i=0,j=0; i<size; i++)
     {
         isFound = False;
         for(int k=0; k<i; k++) if(arr[i]==tab[k]) isFound = True;
-        if(!isFound) 
-        {
-            tab[j] = arr[i];
-            j++;
-        }
+        if(!isFound) { tab[j] = arr[i]; j++; }
     }
 }
 
-//Helper func to swap to int
+//Helper func to swap tow int
 void swap(int* a, int* b)
 {
     *a^=*b^=*a^=*b;
 }
 
-//Buble Sort
-void bubleSort(int arr[], int size)
+void bubbleSort(int arr[], int size)
 {
     // Handle if the array is already sorted
     bool isSorted = True;
@@ -71,4 +63,33 @@ void bubleSort(int arr[], int size)
             }
         if(isSorted) break;
     }
+}
+
+int max(int arr[], int size)
+{
+    int tmpKey = arr[0];
+    for (int i = 1; i < size; i++) if ( tmpKey < arr[i] ) tmpKey = arr[i];
+    return tmpKey;
+}
+
+int min(int arr[], int size)
+{
+    int tmpKey = arr[0];
+    for (int i = 1; i < size; i++) if ( tmpKey > arr[i] ) tmpKey = arr[i];
+    return tmpKey;
+}
+
+bool isPrime(int num)
+{
+    for (int i = 2; i < sqrt(num); i++)
+    {
+        if ( !(num % i) ) return False;
+        return True;
+    }
+}
+
+// Find prime #s in array of integers & store them in subarr
+void subPrime(int arr[], int size, int subarr[])
+{
+    for (int i = 0, j = 0; i < size; i++) if ( isPrime(arr[i]) ) { subarr[j] = arr[i]; j++; }
 }
