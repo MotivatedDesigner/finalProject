@@ -34,25 +34,18 @@ void printArray(int arr[], int length)
 }
 
 // Delete repeated elements from array of int
-int* deleteDouble(int arr[], int size, int start)
+void deleteDouble(int arr[], int size, int tab[])
 {
-    // count will be the size of the returned array
-    int count = size;
-    int tmp;
-    
-    for (int i = 0; i < size; i++) 
+    bool isFound;
+    int tmpKey;
+    for(int i=0,j=0; i<size; i++)
     {
-        
-        // Fill repeated elements with (start-1) as a mark (no element in the initial array will have the value (start-1))
-        if( arr[i] == (start-1) ) continue;
-        
-        tmp = arr[i];
-        
-        for (int j = i+1; j < size; j++) 
+        isFound = False;
+        for(int k=0; k<i; k++) if(arr[i]==tab[k]) isFound = True;
+        if(!isFound) 
         {
-            
-            // If element found more than once his place will be filled with (start-1) 
-            if( arr[j] == tmp ){ arr[j] = (start-1); count--; }
+            tab[j] = arr[i];
+            j++;
         }
     }
 }

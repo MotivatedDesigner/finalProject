@@ -15,7 +15,7 @@ void initArray(int arr[], int size, int start, int end);
 
 void printArray(int arr[], int length);
 
-int* deleteDouble(int arr[], int size, int start);
+void deleteDouble(int arr[], int size, int tab[]);
 
 void swap(int* a, int* b);
 
