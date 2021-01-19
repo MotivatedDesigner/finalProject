@@ -30,3 +30,5 @@ int min(int arr[], int size);
 void subPrime(int arr[], int size, int subarr[]);
 
 bool isIn(int arr[], int size, int value);
+
+void arrayPairImpair(int arr[], int size, int arrPair[], int arrImpair[]);

@@ -100,3 +100,12 @@ bool isIn(int arr[], int size, int value)
     for (int i = 0; i < size; i++) if ( arr[i] == value ) return True;
     return False;
 }
+
+void arrayPairImpair(int arr[], int size, int arrPair[], int arrImpair[])
+{
+    for (int i = 0, pairIndex = 0, impairIndex = 0; i < size; i++)
+    {
+        if ( arr[i] % 2 )  { arrImpair[impairIndex] = arr[impairIndex]; impairIndex++; }
+        else { arrPair[pairIndex] = arr[i]; pairIndex++; }
+    }
+}
