@@ -12,3 +12,11 @@ int getSize(int arr[]);
 int aleatoire(int start, int end);
 
 void initArray(int arr[], int size, int start, int end);
+
+void printArray(int arr[], int length);
+
+int* deleteDouble(int arr[], int size, int start);
+
+void swap(int* a, int* b);
+
+void bubleSort(int arr[], int size);
