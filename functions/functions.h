@@ -28,3 +28,5 @@ int max(int arr[], int size);
 int min(int arr[], int size);
 
 void subPrime(int arr[], int size, int subarr[]);
+
+bool isIn(int arr[], int size, int value);

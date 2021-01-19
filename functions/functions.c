@@ -93,3 +93,10 @@ void subPrime(int arr[], int size, int subarr[])
 {
     for (int i = 0, j = 0; i < size; i++) if ( isPrime(arr[i]) ) { subarr[j] = arr[i]; j++; }
 }
+
+// Check if an integer exists in array
+bool isIn(int arr[], int size, int value)
+{
+    for (int i = 0; i < size; i++) if ( arr[i] == value ) return True;
+    return False;
+}
